@@ -8,6 +8,9 @@
         public RecordRepo()
         {
             _records = new List<Record>();
+            _records.Add(new Record("candyshop", "50cent", 4.59, 2008));
+            _records.Add(new Record("Shake it", "Jesper H", 3.32, 2012));
+            _records.Add(new Record("Shake dat", "Jesper HG", 3.31, 2011));
         }
 
         // CRUD
@@ -25,7 +28,7 @@
 
         public Record? Delete(int id)
         {
-            Record deletedRecord = _records.Find(r => r.Id == id);
+            Record? deletedRecord = _records.Find(r => r.Id == id);
             if (deletedRecord != null)
                 return null;
 
