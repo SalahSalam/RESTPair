@@ -1,7 +1,8 @@
-﻿namespace PladeRepo
+﻿namespace RecordRepo
 {
     public class Record
     {
+        public int Id { get; set; }
         public string Title { get; private set; }
         public string Artist { get; private set; }
         public double Duration { get; private set; }
